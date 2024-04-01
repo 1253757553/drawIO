@@ -1,9 +1,140 @@
-<mxfile host="app.diagrams.net" modified="2024-04-01T11:00:51.903Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" version="24.2.1" etag="t-N3n4sEX8a101C0Nefg" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-01T13:03:24.559Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="B1dLWRD8yExZlo7rcHcb" version="24.2.1" type="github">
   <diagram name="第 1 页" id="wHKWAx3UkNSvwidnDVWt">
-    <mxGraphModel>
+    <mxGraphModel dx="2607" dy="1491" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-40" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBorderColor=none;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="830" width="1330" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-1" value="RefCountedObject" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="533" y="80" width="220" height="110" as="geometry">
+            <mxRectangle x="410" y="480" width="140" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-2" value="- nref:&amp;nbsp; mutable std::atomic&amp;lt;uint64_t&amp;gt;&lt;div&gt;- cct:&amp;nbsp; &amp;nbsp; CephContext *&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-1">
+          <mxGeometry y="26" width="220" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-1">
+          <mxGeometry y="60" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-4" value="+ put():&amp;nbsp; &amp;nbsp;void&lt;div&gt;+ get():&amp;nbsp; &amp;nbsp;RefCountedObject *&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-1">
+          <mxGeometry y="68" width="220" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-5" value="Message" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="398" y="291" width="490" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-6" value="# header:&amp;nbsp; ceph_msg_header&amp;nbsp; // 消息头：定义消息传递相关的 元数据&lt;div&gt;# footer:&amp;nbsp; &amp;nbsp; ceph_msg_footer&amp;nbsp; &amp;nbsp; // 消息尾：附加 crc 检验信息 和 结束标志&lt;/div&gt;&lt;div&gt;# payload: bufferlist&amp;nbsp; // 一般保存 ceph 操作相关的（没有对齐）&lt;/div&gt;&lt;div&gt;# middle:&amp;nbsp; &amp;nbsp;bufferlist&amp;nbsp; // 目前未使用到（没有对齐）&lt;/div&gt;&lt;div&gt;# data:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;bufferlist&amp;nbsp; // 一般为读写的数据（尽可能的页对齐）&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;【一般情况下：&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;recv_stamp &amp;lt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;throttle_stamp &amp;lt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;recv_complete_stamp &amp;lt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;dispatch_stamp&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;】&lt;/span&gt;&lt;/div&gt;&lt;div&gt;// 消息开始接收的时间（使用当前时间设置该值后开始读取数据）&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;# recv_stamp:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; utime_t&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;// 消息分发的时间（在具体分发函数开头使用当前值设置）&lt;/div&gt;&lt;div&gt;# dispatch_stamp:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;utime_t&lt;/div&gt;&lt;div&gt;// 获取到 资源槽位的时间&lt;/div&gt;&lt;div&gt;# throttle_stamp:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;utime_t&lt;/div&gt;&lt;div&gt;// 消息接收完成时间（接收完成后使用当前值设置）&lt;/div&gt;&lt;div&gt;# recv_complete_stamp: utime_t&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;# connection: &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;ConnectionRef&amp;nbsp; // 网络连接句柄&lt;/div&gt;&lt;div&gt;#&amp;nbsp;trace:&amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ZTracer::Trace&amp;nbsp; //&amp;nbsp;Zipkin追踪对象，记录请求在Ceph系统内部各个组件之间的传递和处理情况&lt;/div&gt;&lt;div&gt;# magic: &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;uint32_t = 0&amp;nbsp; // 消息的 magic num&lt;br&gt;#&amp;nbsp;byte_throttler:&amp;nbsp;&amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Throttle * = nullptr&amp;nbsp; // 当 三个 bufferlist 释放后，资源大小释放给这个 节流器&lt;/div&gt;&lt;div&gt;#&amp;nbsp;msg_throttler:&amp;nbsp;&amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Throttle * = nullptr&amp;nbsp; // 当前消息销毁时，释放一个资源（槽位）给此节流器&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;//&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;记录在预留空间时消息的大小，以便稍后能够正确释放空间&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;#&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;dispatch_throttle_size: uint64 = 0&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;#&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;completion_hook:&amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;CompletionHook* = nullptr&amp;nbsp; // 消息销毁时（完成后）的回调&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-5">
+          <mxGeometry y="26" width="490" height="404" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-11" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="QgA-dz_zXuOLvlTgo4UR-5" target="QgA-dz_zXuOLvlTgo4UR-4">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="613" y="340" as="sourcePoint" />
+            <mxPoint x="543" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-14" value="ceph_msg_header" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="150" width="370" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-16" value="&lt;div&gt;+ seq : &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;__le64&amp;nbsp; // 当前 Session 内的唯一序号&lt;/div&gt;&lt;div&gt;+ tid : &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;__le64&amp;nbsp; // 消息的全局唯一 id&lt;/div&gt;&lt;div&gt;+ type : &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__le16&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;// 消息类型（OSD 心跳，MOSDOp 等)&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ priority :&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__le16&amp;nbsp; // 消息的优先级&lt;/div&gt;&lt;div&gt;+ version : &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__le16&amp;nbsp; // 消息编码的版本&lt;/div&gt;&lt;div&gt;+ front_len : &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__le32&amp;nbsp; // payload 的长度&lt;/div&gt;&lt;div&gt;+ middle_len : &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__le32&amp;nbsp; // middle 的长度&lt;/div&gt;&lt;div&gt;+ data_len : &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__le32&amp;nbsp; // data 的长度&lt;/div&gt;&lt;div&gt;+ data_off :&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__le16&amp;nbsp; // 对象的数据偏移量&lt;/div&gt;&lt;div&gt;+ src : &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;struct ceph_entity_name // 消息源，eg：osd0，mon3&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;// 一些旧代码用于兼容，如果为 0 请忽略&lt;/div&gt;&lt;div&gt;+ compat_version : __le16&lt;/div&gt;&lt;div&gt;+ reserved : &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__le16&lt;/div&gt;&lt;div&gt;+ crc : &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__le32&amp;nbsp; // 消息头的 crc 检验信息&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-14">
+          <mxGeometry y="26" width="370" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-18" value="ceph_msg_footer" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="420" width="370" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-19" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;front_crc&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;: &lt;/span&gt;&lt;span style=&quot;background-color: initial; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;__le32&amp;nbsp; // payload 的 crc 信息&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ middle_crc&amp;nbsp;: &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__le32&amp;nbsp; // middle 的 crc 信息&lt;/div&gt;&lt;div&gt;+ data_crc : &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__le32&amp;nbsp; // data 的 crc 信息&lt;/div&gt;&lt;div&gt;+ sig :&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;__le64&amp;nbsp; // 消息的 64 位签名信息&lt;/div&gt;&lt;div&gt;+ flags : &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;__u8&amp;nbsp;// 结束标志&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-18">
+          <mxGeometry y="26" width="370" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-20" value="MOSDMap" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="870" width="160" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-21" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-20">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-22" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-20">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-23" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-20">
+          <mxGeometry y="60" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-24" value="MOSDPing" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="870" width="160" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-25" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-24">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-26" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-24">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-27" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-24">
+          <mxGeometry y="60" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-28" value="MOSDFastDispatchOp" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="870" width="160" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-29" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-28">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-30" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-28">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-31" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-28">
+          <mxGeometry y="60" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-32" value="MOSDOpReply" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="870" width="160" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-33" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-32">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-34" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-32">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-35" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-32">
+          <mxGeometry y="60" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-36" value="MOSDOp" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="533" y="1020" width="160" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-37" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-36">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-38" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-36">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-39" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-36">
+          <mxGeometry y="60" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-41" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.488;entryY=1.003;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QgA-dz_zXuOLvlTgo4UR-20" target="QgA-dz_zXuOLvlTgo4UR-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="320" y="860" as="sourcePoint" />
+            <mxPoint x="480" y="860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-42" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.503;entryY=1.003;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QgA-dz_zXuOLvlTgo4UR-24" target="QgA-dz_zXuOLvlTgo4UR-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="170" y="880" as="sourcePoint" />
+            <mxPoint x="652" y="733" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-43" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="QgA-dz_zXuOLvlTgo4UR-28">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="390" y="880" as="sourcePoint" />
+            <mxPoint x="630" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-44" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="QgA-dz_zXuOLvlTgo4UR-32">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="780" y="840" as="sourcePoint" />
+            <mxPoint x="630" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-45" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.528;entryY=1.058;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QgA-dz_zXuOLvlTgo4UR-36" target="QgA-dz_zXuOLvlTgo4UR-31">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="620" y="880" as="sourcePoint" />
+            <mxPoint x="640" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
