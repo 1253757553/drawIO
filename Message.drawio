@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2024-04-01T13:04:54.384Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="ZEBB6zFIQyZLo-u25bie" version="24.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-02T03:16:55.962Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="giTEY7Y2zjHTwMIiNqKh" version="24.2.1" type="github">
   <diagram name="第 1 页" id="wHKWAx3UkNSvwidnDVWt">
-    <mxGraphModel dx="2206" dy="1262" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2390" dy="1367" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="QgA-dz_zXuOLvlTgo4UR-40" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBorderColor=none;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="10" y="830" width="1330" height="320" as="geometry" />
+          <mxGeometry x="10" y="830" width="1340" height="500" as="geometry" />
         </mxCell>
         <mxCell id="QgA-dz_zXuOLvlTgo4UR-1" value="RefCountedObject" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="533" y="80" width="220" height="110" as="geometry">
@@ -94,16 +94,10 @@
           <mxGeometry y="60" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="QgA-dz_zXuOLvlTgo4UR-36" value="MOSDOp" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="533" y="1020" width="160" height="86" as="geometry" />
+          <mxGeometry x="374" y="1020" width="480" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="QgA-dz_zXuOLvlTgo4UR-37" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-36">
-          <mxGeometry y="26" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="QgA-dz_zXuOLvlTgo4UR-38" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-36">
-          <mxGeometry y="52" width="160" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="QgA-dz_zXuOLvlTgo4UR-39" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-36">
-          <mxGeometry y="60" width="160" height="26" as="geometry" />
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-37" value="&lt;div&gt;-&amp;nbsp;HEAD_VERSION: static const int = 0&amp;nbsp; // 表示当前 消息的版本&lt;/div&gt;&lt;div&gt;-&amp;nbsp;COMPAT_VERSION:&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;static const int = 0&amp;nbsp; // 最低兼容以前消息的版本号&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;- client_inc:&amp;nbsp;uint32_t = 0&amp;nbsp; //&amp;nbsp;客户端递增计数器，用于跟踪来自同一客户端的请求顺序&lt;div&gt;-&amp;nbsp;osdmap_epoch:&amp;nbsp;__u32 = 0&amp;nbsp; // 该操作基于哪个 epoch 的 OSDMap&lt;/div&gt;&lt;div&gt;- flags:&amp;nbsp;__u32 = 0&amp;nbsp; //&amp;nbsp;用于标识操作的不同属性和行为&lt;/div&gt;&lt;div&gt;-&amp;nbsp;mtime:&amp;nbsp;utime_t&amp;nbsp; // 消息的创建修改时间（librados 中是使用 op 的 mtime 直接赋值）&lt;/div&gt;&lt;div&gt;-&amp;nbsp;retry_attempt: int32_t = -1&amp;nbsp; //&amp;nbsp;重试次数，0 表示第一次尝试&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;hobj:&amp;nbsp;hobject_t&amp;nbsp; //&amp;nbsp;操作的对象&lt;/div&gt;&lt;div&gt;-&amp;nbsp;pgid:&amp;nbsp;spg_t&amp;nbsp; //&amp;nbsp;对象所在的 PG&lt;/div&gt;&lt;div&gt;+&amp;nbsp;ops:&amp;nbsp;vector&amp;lt;OSDOp&amp;gt;&amp;nbsp; //&amp;nbsp;针对 hobj 多个操作的集合&lt;/div&gt;&lt;div&gt;-&amp;nbsp;reqid:&amp;nbsp;osd_reqid_t&amp;nbsp; // 由发送方确定的 唯一请求 id&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;snap_seq:&amp;nbsp;snapid_t&amp;nbsp; //&amp;nbsp;head 对象，就是最新的快照序号&lt;/div&gt;&lt;div&gt;-&amp;nbsp;snaps:&amp;nbsp;vector&amp;lt;snapid_t&amp;gt;&amp;nbsp; //&amp;nbsp;所有的 snap 列表&lt;/div&gt;&lt;div&gt;-&amp;nbsp;features:&amp;nbsp;uint64_t // 一组标志&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-36">
+          <mxGeometry y="26" width="480" height="254" as="geometry" />
         </mxCell>
         <mxCell id="QgA-dz_zXuOLvlTgo4UR-41" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.488;entryY=1.003;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QgA-dz_zXuOLvlTgo4UR-20" target="QgA-dz_zXuOLvlTgo4UR-6">
           <mxGeometry width="160" relative="1" as="geometry">
