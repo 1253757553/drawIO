@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-02T09:26:47.288Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="3U0EYM-S9kFSIkYnLAqg" version="24.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-02T12:45:46.877Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="ava1sszAmV0FrH6TdzAk" version="24.2.1" type="github">
   <diagram name="第 1 页" id="wHKWAx3UkNSvwidnDVWt">
-    <mxGraphModel dx="2868" dy="2809" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="7170" dy="5269" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -284,7 +284,7 @@
           <mxGeometry y="60" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="QgA-dz_zXuOLvlTgo4UR-101" value="AsyncMessenger" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1885" y="2320" width="380" height="170" as="geometry" />
+          <mxGeometry x="2270" y="2320" width="380" height="170" as="geometry" />
         </mxCell>
         <mxCell id="QgA-dz_zXuOLvlTgo4UR-102" value="- deleted_conns:&amp;nbsp;set&amp;lt;AsyncConnectionRef&amp;gt;&lt;div&gt;-&amp;nbsp;accepting_conns:&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;set&amp;lt;AsyncConnectionRef&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;conns:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ceph::unordered_map&amp;lt;entity_addr_t, AsyncConnectionRef&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;dispatch_queue:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;DispatchQueue&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-101">
           <mxGeometry y="26" width="380" height="74" as="geometry" />
@@ -296,7 +296,7 @@
           <mxGeometry y="108" width="380" height="62" as="geometry" />
         </mxCell>
         <mxCell id="QgA-dz_zXuOLvlTgo4UR-105" value="XioMessenger" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="2321" y="2320" width="160" height="86" as="geometry" />
+          <mxGeometry x="1995" y="2320" width="160" height="86" as="geometry" />
         </mxCell>
         <mxCell id="QgA-dz_zXuOLvlTgo4UR-106" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-105">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
@@ -424,6 +424,24 @@
               <mxPoint x="3130" y="1410" />
               <mxPoint x="2060" y="1410" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-143" value="DispatchQueue" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2830" y="2205" width="540" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-144" value="- cct:&amp;nbsp;CephContext *&lt;div&gt;-&amp;nbsp;msgr:&amp;nbsp;Messenger *&amp;nbsp; &amp;nbsp; //&amp;nbsp;指向消息传递接口的指针，用于消息的发送和接收&lt;/div&gt;&lt;div&gt;-&amp;nbsp;lock: mutable Mutex&lt;/div&gt;&lt;div&gt;- cond: Cond&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;//&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;QueueItem 封装了下面枚举的 code 以及 待分发的 Message，可使用 get_code 区分判断&lt;/span&gt;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;mqueue:&amp;nbsp;PrioritizedQueue&amp;lt;QueueItem, uint64_t&amp;gt; // k:&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;QueueItem, v: 优先级&lt;/span&gt;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;marrival:&amp;nbsp;set&amp;lt;pair&amp;lt;double, Message*&amp;gt;&amp;gt;&amp;nbsp; // 记录消息到达时间, 使用 m-&amp;gt;get_recv_stamp() 作为 key&lt;/div&gt;&lt;div&gt;-&amp;nbsp;marrival_map:&amp;nbsp;map&amp;lt;Message *, set&amp;lt;pair&amp;lt;double, Message*&amp;gt;&amp;gt;::iterator&amp;gt;&amp;nbsp; //&amp;nbsp;一个映射，用于快速查找 marrival 中的元素&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;next_id:&amp;nbsp;std::atomic&amp;lt;uint64_t&amp;gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; // 用于生成唯一的消息 ID&lt;/div&gt;&lt;div&gt;-&amp;nbsp;enum { D_CONNECT = 1, D_ACCEPT, D_BAD_REMOTE_RESET, D_BAD_RESET, D_CONN_REFUSED, D_NUM_CODES };&amp;nbsp; //&amp;nbsp;枚举类型，定义了内部事件代码&lt;/div&gt;&lt;div&gt;-&amp;nbsp;dispatch_thread:&amp;nbsp;DispatchThread&amp;nbsp; // 消息分发线程&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;local_delivery_lock:&amp;nbsp;Mutex&lt;/div&gt;&lt;div&gt;-&amp;nbsp;local_delivery_cond:&amp;nbsp;Cond&lt;/div&gt;&lt;div&gt;-&amp;nbsp;stop_local_delivery:&amp;nbsp;bool&lt;/div&gt;&lt;div&gt;-&amp;nbsp;local_messages:&amp;nbsp;list&amp;lt;pair&amp;lt;Message *, int&amp;gt;&amp;gt;&amp;nbsp; //&amp;nbsp;本地消息列表，用于存储待传递的消息&lt;/div&gt;&lt;div&gt;-&amp;nbsp;local_delivery_thread:&amp;nbsp;LocalDeliveryThread&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;dispatch_throttler:&amp;nbsp;Throttle&amp;nbsp; //&amp;nbsp;控制消息分发速率的节流器&lt;/div&gt;&lt;div&gt;+&amp;nbsp;stop: bool&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-143">
+          <mxGeometry y="26" width="540" height="324" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-145" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-143">
+          <mxGeometry y="350" width="540" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-146" value="+ DispatchQueue::entry(): void&lt;div&gt;+&amp;nbsp;DispatchQueue::enqueue(Message *m, int priority, uint64_t id): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QgA-dz_zXuOLvlTgo4UR-143">
+          <mxGeometry y="358" width="540" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-147" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.994;exitY=0.631;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QgA-dz_zXuOLvlTgo4UR-102" target="QgA-dz_zXuOLvlTgo4UR-144">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="2590" y="2370" as="sourcePoint" />
+            <mxPoint x="2750" y="2370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
