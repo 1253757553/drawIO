@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-08T02:51:33.722Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="rdBYMFEVfbQjb80b9SGm" version="24.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-08T03:03:56.858Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="Wc6-Pw0roBgfBbJqF7yM" version="24.2.2" type="github">
   <diagram name="第 1 页" id="iNgHnpYzgfJ-TO6qZUMB">
-    <mxGraphModel dx="2607" dy="1491" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2206" dy="1262" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -31,6 +31,9 @@
         <mxCell id="-DYarJk79lC3c7c2wvhr-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-DYarJk79lC3c7c2wvhr-8" target="-DYarJk79lC3c7c2wvhr-10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="-DYarJk79lC3c7c2wvhr-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-DYarJk79lC3c7c2wvhr-8" target="-DYarJk79lC3c7c2wvhr-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="-DYarJk79lC3c7c2wvhr-8" value="int OSD::init()" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="342" y="475" width="161" height="59" as="geometry" />
         </mxCell>
@@ -56,6 +59,17 @@
         </mxCell>
         <mxCell id="-DYarJk79lC3c7c2wvhr-18" value="结束" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="372.5" y="892" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-DYarJk79lC3c7c2wvhr-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="-DYarJk79lC3c7c2wvhr-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="560" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="215" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-DYarJk79lC3c7c2wvhr-20" value="每个 Messenger 注册 Dispatcher" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="154.5" y="474.5" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
