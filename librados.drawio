@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-08T12:43:16.083Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="3-2DZBtacOEBvfErvIej" version="24.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-08T12:44:05.100Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="VJ7F_wU5paBci94lzwf3" version="24.2.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1783" dy="1716" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -39,6 +39,18 @@
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-21" value="ops、&lt;span style=&quot;text-wrap: wrap; font-size: 10px;&quot;&gt;out_bl&lt;/span&gt;、&lt;span style=&quot;text-wrap: wrap; font-size: 10px;&quot;&gt;out_handler&lt;/span&gt;、&lt;span style=&quot;text-wrap: wrap; font-size: 10px;&quot;&gt;out_rval 的&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-wrap: wrap; font-size: 10px;&quot;&gt;size 相同，对应元素不存在&lt;/span&gt;&lt;span style=&quot;text-wrap: wrap; font-size: 10px;&quot;&gt;则指向 NULL&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;fontFamily=Helvetica;fontSize=10;portConstraint=east;overflow=width;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-115" y="-700" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vteJUobceDA6RaGQ8-ky-22" value="Objecter" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;arcSize=42;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="380" y="-660" width="430" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="vteJUobceDA6RaGQ8-ky-23" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="vteJUobceDA6RaGQ8-ky-22">
+          <mxGeometry y="26" width="430" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vteJUobceDA6RaGQ8-ky-24" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;arcSize=42;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="vteJUobceDA6RaGQ8-ky-22">
+          <mxGeometry y="52" width="430" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="vteJUobceDA6RaGQ8-ky-25" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="vteJUobceDA6RaGQ8-ky-22">
+          <mxGeometry y="60" width="430" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
