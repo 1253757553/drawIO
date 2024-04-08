@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-08T12:13:07.435Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="MNkS-T5K0lLuolsiaq5X" version="24.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-08T12:43:16.083Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="3-2DZBtacOEBvfErvIej" version="24.2.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1783" dy="1716" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -8,16 +8,16 @@
           <mxGeometry x="-326" y="-1130" width="740" height="290" as="geometry" />
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-0" value="ObjectOperation" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-140" y="-660" width="310" height="186" as="geometry" />
+          <mxGeometry x="-140" y="-660" width="430" height="250" as="geometry" />
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-1" value="+ ops:&amp;nbsp;vector&amp;lt;OSDOp&amp;gt;&amp;nbsp; // 多个 OSD 操作的集合&lt;div&gt;+&amp;nbsp;flags: int&lt;/div&gt;&lt;div&gt;+&amp;nbsp;priority: int&amp;nbsp; // 操作的优先级，OSD 端有优先级队列&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;out_bl:&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;vector&amp;lt;bufferlist*&amp;gt; // 每个操作的输出集合&lt;/div&gt;&lt;div&gt;+&amp;nbsp;out_handler:&amp;nbsp;vector&amp;lt;Context*&amp;gt; // 每个操作的回调&lt;/div&gt;&lt;div&gt;+&amp;nbsp;out_rval:&amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;vector&amp;lt;int*&amp;gt;&amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&amp;nbsp;&lt;/span&gt;&amp;nbsp; &amp;nbsp; // 每个操作的返回值&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="vteJUobceDA6RaGQ8-ky-0">
-          <mxGeometry y="26" width="310" height="124" as="geometry" />
+          <mxGeometry y="26" width="430" height="124" as="geometry" />
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="vteJUobceDA6RaGQ8-ky-0">
-          <mxGeometry y="150" width="310" height="10" as="geometry" />
+          <mxGeometry y="150" width="430" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="vteJUobceDA6RaGQ8-ky-3" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="vteJUobceDA6RaGQ8-ky-0">
-          <mxGeometry y="160" width="310" height="26" as="geometry" />
+        <mxCell id="vteJUobceDA6RaGQ8-ky-3" value="+ add_data(int op, uint64_t off, uint64_t len, bufferlist&amp;amp; bl): void&lt;div&gt;+&amp;nbsp;add_xattr(int op, const char *name, const bufferlist&amp;amp; data): void&lt;/div&gt;&lt;div&gt;+&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;add_call(int op, const char *cname, const char *method,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;bufferlist &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;amp;indata,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;bufferlist *outbl, Context *ctx, int *prval): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;.......&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="vteJUobceDA6RaGQ8-ky-0">
+          <mxGeometry y="160" width="430" height="90" as="geometry" />
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-4" value="OSDOp" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="124" y="-1050" width="250" height="190" as="geometry" />
@@ -36,6 +36,9 @@
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-17" value="osd_types.h 定义了 OSDOp 格式" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="214" y="-1130" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vteJUobceDA6RaGQ8-ky-21" value="ops、&lt;span style=&quot;text-wrap: wrap; font-size: 10px;&quot;&gt;out_bl&lt;/span&gt;、&lt;span style=&quot;text-wrap: wrap; font-size: 10px;&quot;&gt;out_handler&lt;/span&gt;、&lt;span style=&quot;text-wrap: wrap; font-size: 10px;&quot;&gt;out_rval 的&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-wrap: wrap; font-size: 10px;&quot;&gt;size 相同，对应元素不存在&lt;/span&gt;&lt;span style=&quot;text-wrap: wrap; font-size: 10px;&quot;&gt;则指向 NULL&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;fontFamily=Helvetica;fontSize=10;portConstraint=east;overflow=width;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-115" y="-700" width="380" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
