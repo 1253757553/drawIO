@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-09T04:03:17.039Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="KWsc7PO_99SldlpD3dLH" version="24.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-09T06:24:56.980Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="TFHoR9N4mxhFaSVSIoR5" version="24.2.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2131" dy="1914" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1098" dy="1324" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -68,7 +68,22 @@
           <mxGeometry y="26" width="290" height="84" as="geometry" />
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-35" value="该结构封装了对象所在的PG，以及PG对应的OSD列表等信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="985" y="-962" width="350" height="30" as="geometry" />
+          <mxGeometry x="1470" y="-670" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vteJUobceDA6RaGQ8-ky-36" value="Op" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;arcSize=42;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1340" y="20" width="380" height="514" as="geometry" />
+        </mxCell>
+        <mxCell id="vteJUobceDA6RaGQ8-ky-37" value="+ session: OSDSession *&lt;div&gt;+&amp;nbsp;incarnation: int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;+&amp;nbsp;target:&amp;nbsp;op_target_t&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;tid:&amp;nbsp;ceph_tid_t&lt;/div&gt;&lt;div&gt;+&amp;nbsp;reqid:&amp;nbsp;osd_reqid_t&lt;/div&gt;&lt;div&gt;+&amp;nbsp;attempts:&amp;nbsp;int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;con:&amp;nbsp;ConnectionRef&lt;/div&gt;&lt;div&gt;+&amp;nbsp;features:&amp;nbsp;uint64_t&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;ops:&amp;nbsp;vector&amp;lt;OSDOp&amp;gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;outbl:&amp;nbsp;bufferlist *&lt;/div&gt;&lt;div&gt;+&amp;nbsp;out_bl:&amp;nbsp;vector&amp;lt;bufferlist*&amp;gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;out_handler:&amp;nbsp;vector&amp;lt;Context*&amp;gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;out_rval:&amp;nbsp;vector&amp;lt;int*&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;priority: int&lt;/div&gt;&lt;div&gt;+&amp;nbsp;onfinish: Context&lt;/div&gt;&lt;div&gt;+&amp;nbsp;ontimeout:&amp;nbsp;uint64_t&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;objver:&amp;nbsp;version_t *&lt;/div&gt;&lt;div&gt;+ reply_epoch:&amp;nbsp;epoch_t *&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;stamp:&amp;nbsp;ceph::coarse_mono_time&lt;/div&gt;&lt;div&gt;+&amp;nbsp;map_dne_bound:&amp;nbsp;epoch_t&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;budgeted: bool&lt;/div&gt;&lt;div&gt;+&amp;nbsp;should_resend: bool&lt;/div&gt;&lt;div&gt;+&amp;nbsp;ctx_budgeted: bool&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;data_offset: int *&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="vteJUobceDA6RaGQ8-ky-36">
+          <mxGeometry y="26" width="380" height="454" as="geometry" />
+        </mxCell>
+        <mxCell id="vteJUobceDA6RaGQ8-ky-38" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;arcSize=42;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="vteJUobceDA6RaGQ8-ky-36">
+          <mxGeometry y="480" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="vteJUobceDA6RaGQ8-ky-39" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="vteJUobceDA6RaGQ8-ky-36">
+          <mxGeometry y="488" width="380" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vteJUobceDA6RaGQ8-ky-40" value="结构Op封装了完成一个操作的相关上下文信息，包括target地址信息、链接信息等" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1175" y="-32" width="450" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
