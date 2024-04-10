@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-10T07:54:06.107Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="vsbbEn3_AvNhcw9hxyPA" version="24.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-10T08:05:29.991Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="T3LV9kXfkwY1aThIc80a" version="24.2.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="11214" dy="6636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="7390" dy="4449" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -168,7 +168,7 @@
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-76" value="inner class" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];arcSize=42;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" connectable="0" parent="vteJUobceDA6RaGQ8-ky-75">
           <mxGeometry x="0.0747" y="5" relative="1" as="geometry">
-            <mxPoint x="1" as="offset" />
+            <mxPoint x="231" y="-33" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-77" value="" style="endArrow=open;startArrow=circlePlus;endFill=0;startFill=0;endSize=8;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=0.502;exitY=1.018;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="vteJUobceDA6RaGQ8-ky-25" target="vteJUobceDA6RaGQ8-ky-41">
@@ -179,7 +179,7 @@
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-78" value="inner class" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];arcSize=42;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" connectable="0" parent="vteJUobceDA6RaGQ8-ky-77">
           <mxGeometry x="0.0747" y="5" relative="1" as="geometry">
-            <mxPoint x="1" as="offset" />
+            <mxPoint x="151" y="-45" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-79" value="" style="endArrow=open;startArrow=circlePlus;endFill=0;startFill=0;endSize=8;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.498;exitY=0.996;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="vteJUobceDA6RaGQ8-ky-25" target="vteJUobceDA6RaGQ8-ky-45">
@@ -190,7 +190,7 @@
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-80" value="inner class" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];arcSize=42;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" connectable="0" parent="vteJUobceDA6RaGQ8-ky-79">
           <mxGeometry x="0.0747" y="5" relative="1" as="geometry">
-            <mxPoint x="1" as="offset" />
+            <mxPoint x="22" y="-37" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-83" value="" style="endArrow=open;startArrow=circlePlus;endFill=0;startFill=0;endSize=8;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.485;exitY=1.002;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="vteJUobceDA6RaGQ8-ky-25" target="vteJUobceDA6RaGQ8-ky-53">
@@ -201,7 +201,7 @@
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-84" value="inner class" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];arcSize=42;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" connectable="0" parent="vteJUobceDA6RaGQ8-ky-83">
           <mxGeometry x="0.0747" y="5" relative="1" as="geometry">
-            <mxPoint x="1" as="offset" />
+            <mxPoint x="-127" y="-15" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-85" value="" style="endArrow=open;startArrow=circlePlus;endFill=0;startFill=0;endSize=8;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=0.481;exitY=1.011;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="vteJUobceDA6RaGQ8-ky-25" target="vteJUobceDA6RaGQ8-ky-57">
@@ -212,7 +212,7 @@
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-86" value="inner class" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];arcSize=42;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" connectable="0" parent="vteJUobceDA6RaGQ8-ky-85">
           <mxGeometry x="0.0747" y="5" relative="1" as="geometry">
-            <mxPoint x="1" as="offset" />
+            <mxPoint x="-294" y="-18" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-88" value="" style="endArrow=open;startArrow=circlePlus;endFill=0;startFill=0;endSize=8;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.008;entryY=0.21;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="vteJUobceDA6RaGQ8-ky-23" target="vteJUobceDA6RaGQ8-ky-28">
@@ -234,7 +234,7 @@
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-82" value="inner class" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];arcSize=42;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" vertex="1" connectable="0" parent="vteJUobceDA6RaGQ8-ky-81">
           <mxGeometry x="0.0747" y="5" relative="1" as="geometry">
-            <mxPoint x="1" as="offset" />
+            <mxPoint x="-73" y="-30" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="vteJUobceDA6RaGQ8-ky-90" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;对象处理层 与 IO处理层 数据操作交互的接口，上层将操作转换为&amp;nbsp;&lt;span style=&quot;text-wrap: wrap;&quot;&gt;ObjectOperation，调用 Objecter 相应方法 将其转换为特定的 Op 发送出去&lt;/span&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;fillColor=#e1d5e7;fontFamily=Helvetica;fontSize=12;portConstraint=none;perimeter=none;resizeWidth=1;overflow=width;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
