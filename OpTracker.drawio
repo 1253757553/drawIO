@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-13T08:55:21.212Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="CPcOezeRv4HWpg_nWmFO" version="24.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-13T08:56:20.285Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="kbUydMeNOijxc-NYuV3f" version="24.2.3" type="github">
   <diagram name="第 1 页" id="eP1qXjq0k11nFUcHAtOl">
-    <mxGraphModel dx="5436" dy="2622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="7740" dy="3933" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -107,7 +107,7 @@
           <mxGeometry x="450" y="520" width="340" height="30" as="geometry" />
         </mxCell>
         <mxCell id="hGZWnn0533_g1E7V-QC0-38" value="ClassInfo" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="620" y="2730" width="310" height="110" as="geometry" />
+          <mxGeometry x="370" y="1800" width="310" height="110" as="geometry" />
         </mxCell>
         <mxCell id="hGZWnn0533_g1E7V-QC0-39" value="+ class_name: &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;const string&lt;div&gt;+&amp;nbsp;method_name: &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;const string&lt;/div&gt;&lt;div&gt;+&amp;nbsp;read: const &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;bool&lt;/div&gt;&lt;div&gt;+&amp;nbsp;write: const &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;bool&lt;/div&gt;&lt;div&gt;+&amp;nbsp;whitelisted: &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;const bool&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="hGZWnn0533_g1E7V-QC0-38">
           <mxGeometry y="26" width="310" height="84" as="geometry" />
@@ -188,6 +188,12 @@
         </mxCell>
         <mxCell id="hGZWnn0533_g1E7V-QC0-30" value="mon 定义的" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d6b656;fillColor=#fff2cc;" vertex="1" parent="1">
           <mxGeometry x="2155" y="1440" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hGZWnn0533_g1E7V-QC0-58" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.001;entryY=0.676;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.167;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="hGZWnn0533_g1E7V-QC0-39" target="hGZWnn0533_g1E7V-QC0-22">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="520" y="2190" as="sourcePoint" />
+            <mxPoint x="680" y="2190" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
