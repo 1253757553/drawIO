@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-14T08:28:47.813Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="aqMkDBaNcH_M9ROVvneO" version="24.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-14T08:31:29.920Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="ym68TRhvjfOssgBetQMS" version="24.2.3" type="github">
   <diagram name="第 1 页" id="OJSNp1td6rTHUpe7NG8o">
     <mxGraphModel dx="3613" dy="1686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -46,7 +46,7 @@
         <mxCell id="VQCMDXDug2qxLCkutru4-4" value="OSD::ms_fast_dispatch(Message *m)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="647" y="464" width="183" height="36" as="geometry" />
         </mxCell>
-        <mxCell id="VQCMDXDug2qxLCkutru4-5" value="op_shardedwq" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="VQCMDXDug2qxLCkutru4-5" value="op_shardedwq" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="671" y="559" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1">
@@ -140,7 +140,7 @@
         <mxCell id="VQCMDXDug2qxLCkutru4-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VQCMDXDug2qxLCkutru4-39" target="VQCMDXDug2qxLCkutru4-50">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VQCMDXDug2qxLCkutru4-39" value="加入&amp;nbsp;op_shardedwq" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="VQCMDXDug2qxLCkutru4-39" value="加入&amp;nbsp;op_shardedwq" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="-460" y="612" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VQCMDXDug2qxLCkutru4-42" target="VQCMDXDug2qxLCkutru4-44">
@@ -197,6 +197,9 @@
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-58" value="vector 容器，push_back 添加，前面不完成会阻塞后面的op&lt;div&gt;由于每个 client connection 都有自己的 session 队列，不会影响其它&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="1">
           <mxGeometry x="-350" y="740" width="380" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VQCMDXDug2qxLCkutru4-59" value="以下情况都会导致 waiting_on_map 内请求执行：&lt;div style=&quot;padding-left: 12px;&quot;&gt;1. 本 connection 新来请求&lt;div&gt;2. OSDMap 的更新&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="-287" y="115" width="290" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
