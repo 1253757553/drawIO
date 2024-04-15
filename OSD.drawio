@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-14T16:05:56.106Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="7-46P2DwWUg4TLUi3Js4" version="24.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-15T13:06:18.145Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="yZJwvjh1DrM9ii8ltqKn" version="24.2.3" type="github">
   <diagram name="第 1 页" id="OJSNp1td6rTHUpe7NG8o">
-    <mxGraphModel dx="5160" dy="2622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2465" dy="1025" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -300,7 +300,7 @@
         <mxCell id="VQCMDXDug2qxLCkutru4-111" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VQCMDXDug2qxLCkutru4-108" target="VQCMDXDug2qxLCkutru4-110">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VQCMDXDug2qxLCkutru4-112" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VQCMDXDug2qxLCkutru4-111">
+        <mxCell id="VQCMDXDug2qxLCkutru4-112" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VQCMDXDug2qxLCkutru4-111">
           <mxGeometry x="-0.3622" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -308,7 +308,7 @@
         <mxCell id="VQCMDXDug2qxLCkutru4-114" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VQCMDXDug2qxLCkutru4-108" target="VQCMDXDug2qxLCkutru4-113">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VQCMDXDug2qxLCkutru4-115" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VQCMDXDug2qxLCkutru4-114">
+        <mxCell id="VQCMDXDug2qxLCkutru4-115" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VQCMDXDug2qxLCkutru4-114">
           <mxGeometry x="-0.3222" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -401,19 +401,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-126" value="这个 PGSlot 是否是刚才新建的&lt;div&gt;(&lt;span style=&quot;background-color: initial;&quot;&gt;PGSlot 指向的 pg 是否存在&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1866" y="789.94" width="220" height="100.06" as="geometry" />
+          <mxGeometry x="1865" y="789.94" width="220" height="100.06" as="geometry" />
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-132" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VQCMDXDug2qxLCkutru4-128" target="VQCMDXDug2qxLCkutru4-131">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-128" value="&lt;ol style=&quot;padding-left: 20px;&quot;&gt;&lt;li&gt;记录下当前 slot 的&amp;nbsp;requeue_seq（用于后续判断 pgslot 有无重新排序）&lt;/li&gt;&lt;li&gt;将&amp;nbsp;当前正在处理 PG 查找/锁定的进程数&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; font-size: 16px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;num_running++，表示又多一个线程在处理这个 pgslot（自己）&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;align=left;" vertex="1" parent="1">
-          <mxGeometry x="1630" y="1040" width="230" height="80" as="geometry" />
+          <mxGeometry x="1631" y="1040" width="230" height="80" as="geometry" />
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-134" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VQCMDXDug2qxLCkutru4-131" target="VQCMDXDug2qxLCkutru4-133">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-131" value="&lt;div style=&quot;padding-left: 5px;&quot;&gt;先对&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;PG 加锁&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;，再对&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;OSDShard 加锁&lt;/span&gt;&lt;/div&gt;&lt;ol style=&quot;padding-left: 20px; margin-top: 0px; margin-bottom: 0px;&quot;&gt;&lt;li&gt;pg-&amp;gt;lock();&lt;/li&gt;&lt;li&gt;sdata-&amp;gt;shard_lock();&lt;/li&gt;&lt;/ol&gt;" style="whiteSpace=wrap;html=1;align=left;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1630" y="1210" width="230" height="60" as="geometry" />
+          <mxGeometry x="1631" y="1210" width="230" height="60" as="geometry" />
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-136" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="VQCMDXDug2qxLCkutru4-133" target="VQCMDXDug2qxLCkutru4-135">
           <mxGeometry relative="1" as="geometry" />
@@ -428,7 +428,7 @@
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-140" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VQCMDXDug2qxLCkutru4-139">
           <mxGeometry x="-0.3181" y="3" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-3" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-133" value="再次判断 PGSlot 指向的 pg 是否存在&lt;div&gt;(this can happen if we race with pg removal)&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;align=center;strokeWidth=2;spacingTop=-12;" vertex="1" parent="1">
@@ -441,13 +441,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-138" value="拿到 slot 句柄，将该 slot 的&amp;nbsp;num_running减一" style="whiteSpace=wrap;html=1;strokeWidth=2;spacingTop=0;" vertex="1" parent="1">
-          <mxGeometry x="1640" y="1540" width="210" height="60" as="geometry" />
+          <mxGeometry x="1641" y="1540" width="210" height="60" as="geometry" />
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-143" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VQCMDXDug2qxLCkutru4-141" target="VQCMDXDug2qxLCkutru4-135">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VQCMDXDug2qxLCkutru4-159" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VQCMDXDug2qxLCkutru4-143">
-          <mxGeometry x="-0.7534" y="-1" relative="1" as="geometry">
+        <mxCell id="VQCMDXDug2qxLCkutru4-229" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VQCMDXDug2qxLCkutru4-143">
+          <mxGeometry x="-0.9532" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -460,7 +460,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-141" value="slot-&amp;gt;to_process.empty()&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;spacingTop=0;" vertex="1" parent="1">
-          <mxGeometry x="1640" y="1670" width="210" height="80" as="geometry" />
+          <mxGeometry x="1641" y="1670" width="210" height="80" as="geometry" />
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-152" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="VQCMDXDug2qxLCkutru4-145" target="VQCMDXDug2qxLCkutru4-151">
           <mxGeometry relative="1" as="geometry">
@@ -483,7 +483,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-145" value="requeue_seq != slot-&amp;gt;requeue_seq" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;spacingTop=0;" vertex="1" parent="1">
-          <mxGeometry x="1640" y="1830" width="210" height="100" as="geometry" />
+          <mxGeometry x="1641" y="1830" width="210" height="100" as="geometry" />
         </mxCell>
         <mxCell id="VQCMDXDug2qxLCkutru4-154" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="VQCMDXDug2qxLCkutru4-151">
           <mxGeometry relative="1" as="geometry">
