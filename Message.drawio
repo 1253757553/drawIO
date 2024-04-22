@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-10T03:38:51.702Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="vDD3jePQk-LpLDE-hfvo" version="24.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-22T02:09:50.485Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="OtBae5ESF9fFcy_lm1YO" version="24.2.3" type="github">
   <diagram name="第 1 页" id="wHKWAx3UkNSvwidnDVWt">
-    <mxGraphModel dx="4780" dy="3902" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2607" dy="2660" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -147,7 +147,7 @@
         <mxCell id="QgA-dz_zXuOLvlTgo4UR-51" value="+ send_message(Message *m) virtual int = 0;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="QgA-dz_zXuOLvlTgo4UR-48" vertex="1">
           <mxGeometry y="298" width="490" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="QgA-dz_zXuOLvlTgo4UR-52" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.522;entryY=1.031;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.462;exitY=0.005;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="QgA-dz_zXuOLvlTgo4UR-4" edge="1" source="QgA-dz_zXuOLvlTgo4UR-48">
+        <mxCell id="QgA-dz_zXuOLvlTgo4UR-52" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.522;entryY=1.031;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.462;exitY=0.005;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="QgA-dz_zXuOLvlTgo4UR-48" target="QgA-dz_zXuOLvlTgo4UR-4" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="2370" y="290" as="sourcePoint" />
             <mxPoint x="1609" y="-190" as="targetPoint" />
@@ -463,16 +463,28 @@
         <mxCell id="tkOinRLOzowJI4Ntb2Wz-10" value="类Message是所有消息的基类，任何要发送的消息，都要继承该类" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#ae4132;fillColor=#fad9d5;fontSize=20;" parent="1" vertex="1">
           <mxGeometry x="360" y="80" width="600" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ErQLbfPIFN81PYUxhgOR-1" value="Classname" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="667" y="3250" width="160" height="86" as="geometry" />
+        <mxCell id="ErQLbfPIFN81PYUxhgOR-1" value="Classname" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="667" y="3250" width="440" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="ErQLbfPIFN81PYUxhgOR-2" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ErQLbfPIFN81PYUxhgOR-1">
+        <mxCell id="ErQLbfPIFN81PYUxhgOR-2" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="ErQLbfPIFN81PYUxhgOR-1" vertex="1">
+          <mxGeometry y="26" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ErQLbfPIFN81PYUxhgOR-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="ErQLbfPIFN81PYUxhgOR-1" vertex="1">
+          <mxGeometry y="52" width="440" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="ErQLbfPIFN81PYUxhgOR-4" value="+ set_cluster_protocol(int p): virtual void = 0&amp;nbsp; // 设置本节点集群协议的版本号" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="ErQLbfPIFN81PYUxhgOR-1" vertex="1">
+          <mxGeometry y="60" width="440" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mpxvqxhV6SLyKFN5Xi5I-1" value="Session" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="3390" width="160" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="mpxvqxhV6SLyKFN5Xi5I-2" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mpxvqxhV6SLyKFN5Xi5I-1">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="ErQLbfPIFN81PYUxhgOR-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="ErQLbfPIFN81PYUxhgOR-1">
+        <mxCell id="mpxvqxhV6SLyKFN5Xi5I-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="mpxvqxhV6SLyKFN5Xi5I-1">
           <mxGeometry y="52" width="160" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="ErQLbfPIFN81PYUxhgOR-4" value="+ set_cluster_protocol(int p): virtual void = 0&amp;nbsp; // 设置本节点集群协议的版本号" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ErQLbfPIFN81PYUxhgOR-1">
+        <mxCell id="mpxvqxhV6SLyKFN5Xi5I-4" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mpxvqxhV6SLyKFN5Xi5I-1">
           <mxGeometry y="60" width="160" height="26" as="geometry" />
         </mxCell>
       </root>
