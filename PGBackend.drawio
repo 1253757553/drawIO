@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-16T14:30:58.108Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="wz85akLratxmZFeXzmnq" version="24.5.4" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-16T16:17:16.451Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="q6AsUlUd7CbUkkKkUKCg" version="24.5.4" type="github">
   <diagram name="第 1 页" id="-uQSeOJSlCtYZD3dOr9u">
     <mxGraphModel dx="7036" dy="1132" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -228,6 +228,9 @@
         </mxCell>
         <mxCell id="nBwcyAybidMbAAUypK3X-79" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="nBwcyAybidMbAAUypK3X-76" vertex="1">
           <mxGeometry y="308" width="500" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="8hAb6hP5T1MTCxgNuVKj-1" value="RepGather 用于（取代 op）追踪分布式写在副本之间的完成情况" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-3090" y="1320" width="370" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
