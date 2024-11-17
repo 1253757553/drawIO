@@ -216,6 +216,9 @@
         <mxCell id="Krd-JYJckKg8CejsmcLy-31" value="前面 init 的所有内存结构全部释放，只是 mkfs，当 mount 时再打开使用" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="-2010" y="3245.75" width="390" height="38.5" as="geometry" />
         </mxCell>
+        <mxCell id="Krd-JYJckKg8CejsmcLy-32" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;logfile 以及 txn 的 flush 还没看懂&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1980" y="2500" width="380" height="120" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
