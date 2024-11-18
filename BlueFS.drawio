@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.8.6">
   <diagram name="第 1 页" id="af1cJnJ8Dssc7urxPvOM">
-    <mxGraphModel dx="3273" dy="2300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3997" dy="2152" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -139,85 +139,161 @@
         <mxCell id="Krd-JYJckKg8CejsmcLy-6" value="&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&amp;nbsp; &amp;nbsp;//&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;文件系统支持不同种类的块设备&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&amp;nbsp; static constexpr unsigned MAX_BDEV = 5;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&amp;nbsp; static constexpr unsigned BDEV_WAL = 0;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 传统的 WAL、DB、SLOW 三块区域&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&amp;nbsp; static constexpr unsigned BDEV_DB = 1;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&amp;nbsp; static constexpr unsigned BDEV_SLOW = 2;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&amp;nbsp; static constexpr unsigned BDEV_NEWWAL = 3;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 用于离线迁移 WAL 和 DB 时定义的&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&amp;nbsp; static constexpr unsigned BDEV_NEWDB = 4;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&amp;nbsp; // 写文件的类型，对外界透明，依据文件的后缀自动判断，用于 perfcount 的计数&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&amp;nbsp; enum {&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;WRITER_UNKNOWN,&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 不清楚的文件类型&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;WRITER_WAL,&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;//&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;RocksDB 的 log 文件&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;WRITER_SST,&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;// RocksDB 的 sst 文件&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&amp;nbsp; };&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="-1130" y="1610" width="600" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Krd-JYJckKg8CejsmcLy-7" target="Krd-JYJckKg8CejsmcLy-8" edge="1">
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-2" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-2840" y="2630" width="510" height="790" as="geometry" />
+        </mxCell>
+        <mxCell id="Krd-JYJckKg8CejsmcLy-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="Lvlxm0AAa2ASX3TsQHqG-2" source="Krd-JYJckKg8CejsmcLy-7" target="Krd-JYJckKg8CejsmcLy-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-7" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;start&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="-2130" y="2590" width="100" height="60" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-7" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;start&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Krd-JYJckKg8CejsmcLy-8" target="Krd-JYJckKg8CejsmcLy-9" edge="1">
+        <mxCell id="Krd-JYJckKg8CejsmcLy-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="Lvlxm0AAa2ASX3TsQHqG-2" source="Krd-JYJckKg8CejsmcLy-8" target="Krd-JYJckKg8CejsmcLy-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-8" value="init&amp;nbsp;vselector" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-2130" y="2680" width="100" height="50" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-8" value="init&amp;nbsp;vselector" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry y="90" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Krd-JYJckKg8CejsmcLy-9" target="Krd-JYJckKg8CejsmcLy-10" edge="1">
+        <mxCell id="Krd-JYJckKg8CejsmcLy-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="Lvlxm0AAa2ASX3TsQHqG-2" source="Krd-JYJckKg8CejsmcLy-9" target="Krd-JYJckKg8CejsmcLy-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-2080" y="2840" />
-              <mxPoint x="-2080" y="2840" />
+              <mxPoint x="50" y="250" />
+              <mxPoint x="50" y="250" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-9" value="init perfcount" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-2130" y="2760" width="100" height="50" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-9" value="init perfcount" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry y="170" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Krd-JYJckKg8CejsmcLy-10" target="Krd-JYJckKg8CejsmcLy-11" edge="1">
+        <mxCell id="Krd-JYJckKg8CejsmcLy-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="Lvlxm0AAa2ASX3TsQHqG-2" source="Krd-JYJckKg8CejsmcLy-10" target="Krd-JYJckKg8CejsmcLy-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-10" value="init alloc" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-2130" y="2840" width="100" height="50" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-10" value="init alloc" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry y="250" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Krd-JYJckKg8CejsmcLy-11" target="Krd-JYJckKg8CejsmcLy-12" edge="1">
+        <mxCell id="Krd-JYJckKg8CejsmcLy-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="Lvlxm0AAa2ASX3TsQHqG-2" source="Krd-JYJckKg8CejsmcLy-11" target="Krd-JYJckKg8CejsmcLy-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-11" value="init superblock" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-2130" y="2922.5" width="100" height="50" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-11" value="init superblock" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry y="332.5" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Krd-JYJckKg8CejsmcLy-12" target="Krd-JYJckKg8CejsmcLy-14" edge="1">
+        <mxCell id="Krd-JYJckKg8CejsmcLy-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="Lvlxm0AAa2ASX3TsQHqG-2" source="Krd-JYJckKg8CejsmcLy-12" target="Krd-JYJckKg8CejsmcLy-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-12" value="init log_file" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-2130" y="3000" width="100" height="50" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-12" value="init log_file" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry y="410" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Krd-JYJckKg8CejsmcLy-14" target="Krd-JYJckKg8CejsmcLy-15" edge="1">
+        <mxCell id="Krd-JYJckKg8CejsmcLy-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="Lvlxm0AAa2ASX3TsQHqG-2" source="Krd-JYJckKg8CejsmcLy-14" target="Krd-JYJckKg8CejsmcLy-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-14" value="init transaction&lt;div&gt;(journal)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-2130" y="3080" width="100" height="50" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-14" value="init transaction&lt;div&gt;(journal)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry y="490" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Krd-JYJckKg8CejsmcLy-15" target="Krd-JYJckKg8CejsmcLy-16" edge="1">
+        <mxCell id="Krd-JYJckKg8CejsmcLy-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="Lvlxm0AAa2ASX3TsQHqG-2" source="Krd-JYJckKg8CejsmcLy-15" target="Krd-JYJckKg8CejsmcLy-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-15" value="flush superblock" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-2130" y="3160" width="100" height="50" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-15" value="flush superblock" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry y="570" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Krd-JYJckKg8CejsmcLy-16" target="Krd-JYJckKg8CejsmcLy-17" edge="1">
+        <mxCell id="Krd-JYJckKg8CejsmcLy-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="Lvlxm0AAa2ASX3TsQHqG-2" source="Krd-JYJckKg8CejsmcLy-16" target="Krd-JYJckKg8CejsmcLy-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-16" value="clean up" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-2130" y="3240" width="100" height="50" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-16" value="clean up" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry y="650" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-17" value="Terminator" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="-2130" y="3320" width="100" height="60" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-17" value="Terminator" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry y="730" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-27" value="&lt;ol style=&quot;padding-left: 15px;&quot;&gt;&lt;li&gt;依据配置修改 super block 中记录的各种类 BlockDevice 的&amp;nbsp;alloc_size，如果发生修改，需要将修改后的 superblock 落盘&lt;/li&gt;&lt;li&gt;为每一个非共享 BlockDevice 初始化一个&amp;nbsp;Allocator&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="-2010" y="2840" width="390" height="50" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-27" value="&lt;ol style=&quot;padding-left: 15px;&quot;&gt;&lt;li&gt;依据配置修改 super block 中记录的各种类 BlockDevice 的&amp;nbsp;alloc_size，如果发生修改，需要将修改后的 superblock 落盘&lt;/li&gt;&lt;li&gt;为每一个非共享 BlockDevice 初始化一个&amp;nbsp;Allocator&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry x="120" y="250" width="390" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-28" value="&lt;div&gt;&lt;div&gt;&amp;nbsp; super.version = 0;&lt;/div&gt;&lt;div&gt;&amp;nbsp; super.block_size = bdev[BDEV_DB]-&amp;gt;get_block_size();&lt;/div&gt;&lt;div&gt;&amp;nbsp; super.osd_uuid = osd_uuid;&lt;/div&gt;&lt;div&gt;&amp;nbsp; super.uuid.generate_random();&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-2010" y="2914" width="390" height="67" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-28" value="&lt;div&gt;&lt;div&gt;&amp;nbsp; super.version = 0;&lt;/div&gt;&lt;div&gt;&amp;nbsp; super.block_size = bdev[BDEV_DB]-&amp;gt;get_block_size();&lt;/div&gt;&lt;div&gt;&amp;nbsp; super.osd_uuid = osd_uuid;&lt;/div&gt;&lt;div&gt;&amp;nbsp; super.uuid.generate_random();&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry x="120" y="324" width="390" height="67" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-29" value="&lt;div&gt;&amp;nbsp; ceph_assert(log.seq_live == 1);&lt;/div&gt;&lt;div&gt;&amp;nbsp; log.t.seq = 1;&lt;/div&gt;&lt;div&gt;&amp;nbsp; log.t.op_init();&lt;/div&gt;&lt;div&gt;&amp;nbsp; _flush_and_sync_log_LD(want_seq = 0);&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="-2010" y="3071.5" width="390" height="67" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-29" value="&lt;div&gt;&amp;nbsp; ceph_assert(log.seq_live == 1);&lt;/div&gt;&lt;div&gt;&amp;nbsp; log.t.seq = 1;&lt;/div&gt;&lt;div&gt;&amp;nbsp; log.t.op_init();&lt;/div&gt;&lt;div&gt;&amp;nbsp; _flush_and_sync_log_LD(want_seq = 0);&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry x="120" y="481.5" width="390" height="67" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-30" value="&lt;div&gt;&amp;nbsp; super.log_fnode = log_file-&amp;gt;fnode;&lt;/div&gt;&lt;div&gt;&amp;nbsp; super.memorized_layout = layout;&lt;/div&gt;&lt;div&gt;&amp;nbsp; _write_super(BDEV_DB);&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// superblock 写到 DB 磁盘的第二个 4KB&lt;/div&gt;&lt;div&gt;&amp;nbsp; _flush_bdev();&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-          <mxGeometry x="-2010" y="3151.5" width="390" height="67" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-30" value="&lt;div&gt;&amp;nbsp; super.log_fnode = log_file-&amp;gt;fnode;&lt;/div&gt;&lt;div&gt;&amp;nbsp; super.memorized_layout = layout;&lt;/div&gt;&lt;div&gt;&amp;nbsp; _write_super(BDEV_DB);&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// superblock 写到 DB 磁盘的第二个 4KB&lt;/div&gt;&lt;div&gt;&amp;nbsp; _flush_bdev();&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry x="120" y="561.5" width="390" height="67" as="geometry" />
         </mxCell>
-        <mxCell id="Krd-JYJckKg8CejsmcLy-31" value="前面 init 的所有内存结构全部释放，只是 mkfs，当 mount 时再打开使用" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="-2010" y="3245.75" width="390" height="38.5" as="geometry" />
+        <mxCell id="Krd-JYJckKg8CejsmcLy-31" value="前面 init 的所有内存结构全部释放，只是 mkfs，当 mount 时再打开使用" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="Lvlxm0AAa2ASX3TsQHqG-2" vertex="1">
+          <mxGeometry x="120" y="655.75" width="390" height="38.5" as="geometry" />
         </mxCell>
-        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-1" value="&lt;ol style=&quot;padding-left: 15px;&quot;&gt;&lt;li&gt;为 log_file 创建一个 FileRef 实例&lt;/li&gt;&lt;li&gt;将其 fnode.ino 分配为 1&lt;/li&gt;&lt;li&gt;为 log_file 提前分配&amp;nbsp;bluefs_max_log_runway 大小的空间&lt;/li&gt;&lt;li&gt;为 log_file&amp;nbsp;创建一个 FileWriter 写入器&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="-2010" y="2991.5" width="390" height="67" as="geometry" />
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-1" value="&lt;ol style=&quot;padding-left: 15px;&quot;&gt;&lt;li&gt;为 log_file 创建一个 FileRef 实例&lt;/li&gt;&lt;li&gt;将其 fnode.ino 分配为 1&lt;/li&gt;&lt;li&gt;为 log_file 提前分配&amp;nbsp;bluefs_max_log_runway 大小的空间&lt;/li&gt;&lt;li&gt;为 log_file&amp;nbsp;创建一个 FileWriter 写入器&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="Lvlxm0AAa2ASX3TsQHqG-2">
+          <mxGeometry x="120" y="401.5" width="390" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-29" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-2300" y="2630" width="510" height="790" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Lvlxm0AAa2ASX3TsQHqG-29" source="Lvlxm0AAa2ASX3TsQHqG-31" target="Lvlxm0AAa2ASX3TsQHqG-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-31" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;start&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="Lvlxm0AAa2ASX3TsQHqG-29">
+          <mxGeometry width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Lvlxm0AAa2ASX3TsQHqG-29" source="Lvlxm0AAa2ASX3TsQHqG-33" target="Lvlxm0AAa2ASX3TsQHqG-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-33" value="open super" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="Lvlxm0AAa2ASX3TsQHqG-29">
+          <mxGeometry y="90" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Lvlxm0AAa2ASX3TsQHqG-29" source="Lvlxm0AAa2ASX3TsQHqG-35" target="Lvlxm0AAa2ASX3TsQHqG-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="250" />
+              <mxPoint x="50" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-35" value="init vselector" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="Lvlxm0AAa2ASX3TsQHqG-29">
+          <mxGeometry y="170" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Lvlxm0AAa2ASX3TsQHqG-29" source="Lvlxm0AAa2ASX3TsQHqG-37" target="Lvlxm0AAa2ASX3TsQHqG-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-37" value="init alloc" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="Lvlxm0AAa2ASX3TsQHqG-29">
+          <mxGeometry y="250" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Lvlxm0AAa2ASX3TsQHqG-29" source="Lvlxm0AAa2ASX3TsQHqG-39" target="Lvlxm0AAa2ASX3TsQHqG-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-39" value="replay" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="Lvlxm0AAa2ASX3TsQHqG-29">
+          <mxGeometry y="372.5" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Lvlxm0AAa2ASX3TsQHqG-29" source="Lvlxm0AAa2ASX3TsQHqG-41" target="Lvlxm0AAa2ASX3TsQHqG-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-41" value="init freelist" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="Lvlxm0AAa2ASX3TsQHqG-29">
+          <mxGeometry y="514" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-43" value="init log_write&lt;div&gt;(journal)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="Lvlxm0AAa2ASX3TsQHqG-29">
+          <mxGeometry y="609" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Lvlxm0AAa2ASX3TsQHqG-29" target="Lvlxm0AAa2ASX3TsQHqG-47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50" y="620" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-48" value="Terminator" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="Lvlxm0AAa2ASX3TsQHqG-29">
+          <mxGeometry y="730" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-49" value="&lt;ol style=&quot;padding-left: 15px;&quot;&gt;&lt;li&gt;依据配置修改 super block 中记录的各种类 BlockDevice 的&amp;nbsp;alloc_size，如果发生修改，需要将修改后的 superblock 落盘&lt;/li&gt;&lt;li&gt;为每一个非共享 BlockDevice 初始化一个&amp;nbsp;Allocator&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="Lvlxm0AAa2ASX3TsQHqG-29">
+          <mxGeometry x="120" y="250" width="390" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-51" value="&lt;div&gt;&amp;nbsp;&amp;nbsp;log.writer = _create_writer(_get_file(1));&lt;/div&gt;&lt;div&gt;&amp;nbsp; log.writer-&amp;gt;pos = log.writer-&amp;gt;file-&amp;gt;fnode.size;&lt;/div&gt;&lt;div&gt;&amp;nbsp; log.writer-&amp;gt;file-&amp;gt;fnode.reset_delta();&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="Lvlxm0AAa2ASX3TsQHqG-29">
+          <mxGeometry x="118" y="600.5" width="390" height="58.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-54" value="&lt;ol style=&quot;padding-left: 15px;&quot;&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="Lvlxm0AAa2ASX3TsQHqG-29">
+          <mxGeometry x="120" y="505.5" width="390" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-55" value="&lt;ol style=&quot;padding-left: 15px;&quot;&gt;&lt;li&gt;读取 super_block 并校验 CRC32 【DB 空间第二个 4KB】&lt;/li&gt;&lt;li&gt;初始化 BlueFS 的 super 成员变量&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="Lvlxm0AAa2ASX3TsQHqG-29">
+          <mxGeometry x="120" y="90" width="390" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-50" value="&lt;ol style=&quot;padding-left: 15px;&quot;&gt;&lt;li&gt;初始化一个 ino 为 1 的 FileRef，并将其&amp;nbsp;fnode 赋值为&amp;nbsp;super.log_fnode&lt;/li&gt;&lt;li&gt;为刚创建的 FileRef 创建一个&amp;nbsp;FileReader&lt;/li&gt;&lt;li&gt;由配置&amp;nbsp;bluefs_log_replay_check_allocations 决定是否验证 log_file 中extends 的分配或释放是否正确，防止重复引用或重复释放。(extends 可能分布在不同的设备上)&lt;/li&gt;&lt;li&gt;&amp;nbsp;循环 read，每次 read 长度为 super.block_size 字节的数据，读取长度不足 super.block_size，由配置 bluefs_replay_recovery 决定尝试 recovery bluefs 的日志还是断言失败&lt;/li&gt;&lt;li&gt;解码前半部分事务并校验&lt;/li&gt;&lt;ul style=&quot;padding-left: 20px;&quot;&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;日志的 uuid 与 super.uuid 是否一致&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;日志的 seq 是否等于 当前&amp;nbsp;&lt;/span&gt;log_seq + 1&lt;/li&gt;&lt;li&gt;日志事务中记录的长度是否超过了 super.block_size，超过了需要把剩余的事务数据全部读取&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;解码事务的 主体，循环处理事务组中的每一条 transaction&lt;/li&gt;&lt;ul style=&quot;padding-left: 20px;&quot;&gt;&lt;li&gt;解码每一条事务的 类型，通过 swich 匹配到对应的处理方式执行&lt;/li&gt;&lt;li&gt;log_seq 自增加 1&lt;br&gt;&lt;/li&gt;&lt;li&gt;log_file-&amp;gt;fnode.size 也要做相应更新&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;一些同步变量也许赋值&lt;/li&gt;&lt;ul style=&quot;padding-left: 20px;&quot;&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;log.seq_live = log_seq + 1;&lt;/li&gt;&lt;li&gt;dirty.seq_live = log_seq + 1;&lt;/li&gt;&lt;li&gt;log.t.seq = log.seq_live;&lt;/li&gt;&lt;li&gt;dirty.seq_stable = log_seq;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;最后校验刚 replay 出来的&amp;nbsp;file_map 中每一个文件的 ino 是否都大于 1，以及 文件的引用数量 ref 是否是 0&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-2458" y="3460" width="390" height="389.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Lvlxm0AAa2ASX3TsQHqG-56" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;详细介绍下&amp;nbsp;OP_DIR_LINK 等几个涉及到 file_map dire_map 的 OP&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-2010" y="3520" width="290" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
