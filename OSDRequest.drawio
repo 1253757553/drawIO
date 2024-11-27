@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.6">
   <diagram name="第 1 页" id="veYvc7N9t9nZ9YCo-E3M">
-    <mxGraphModel dx="2420" dy="910" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2876" dy="1170" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -255,14 +255,14 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="phVuD68tOOP7Y7JKk85J-61" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="phVuD68tOOP7Y7JKk85J-74">
+        <mxCell id="phVuD68tOOP7Y7JKk85J-61" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="phVuD68tOOP7Y7JKk85J-74" target="phVuD68tOOP7Y7JKk85J-62">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1270" y="220" as="sourcePoint" />
             <mxPoint x="1270" y="430" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="phVuD68tOOP7Y7JKk85J-62" value="&lt;div style=&quot;&quot;&gt;PRIVATE-STORAGE-2267&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;osd: set timeout for client requests in rados&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" vertex="1" parent="phVuD68tOOP7Y7JKk85J-74">
-          <mxGeometry x="1150" y="430" width="280" height="40" as="geometry" />
+          <mxGeometry x="1130" y="430" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="phVuD68tOOP7Y7JKk85J-63" value="&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;ol style=&quot;padding-left: 20px;&quot;&gt;&lt;li&gt;队列基本都是 std::list，无遍历需求&lt;/li&gt;&lt;li&gt;requeue op 是由 pg 的 op 执行 (检测到对应的阻塞条件恢复， client op 只会添加)&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="phVuD68tOOP7Y7JKk85J-74">
           <mxGeometry x="1840" y="69.5" width="270" height="49" as="geometry" />
