@@ -410,6 +410,12 @@
         <mxCell id="n9vwS2jP1pAgz-kqXPhd-21" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;WAL&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.disk;" vertex="1" parent="1">
           <mxGeometry x="-3130" y="1480" width="100" height="100" as="geometry" />
         </mxCell>
+        <mxCell id="n9vwS2jP1pAgz-kqXPhd-25" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.hard_disk;" vertex="1" parent="1">
+          <mxGeometry x="-3575" y="1673.5" width="70" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="n9vwS2jP1pAgz-kqXPhd-26" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.hard_disk;" vertex="1" parent="1">
+          <mxGeometry x="-3115" y="1674" width="70" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
