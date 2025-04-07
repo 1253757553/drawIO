@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.2.8">
   <diagram name="第 1 页" id="MkQnZm1Vq_tKfwfNKvTH">
-    <mxGraphModel dx="12667" dy="2060" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="11693" dy="1498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,7 +13,7 @@
         <mxCell id="-AQjl2W1R9NTnIcbNzuT-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shape=flexArrow;startArrow=block;fillColor=#b0e3e6;strokeColor=#0e8088;" edge="1" parent="1" source="-AQjl2W1R9NTnIcbNzuT-25" target="FH-SNYb2Djmgw0VP9b6U-269">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-7700" y="5147" />
+              <mxPoint x="-7700" y="4984" />
               <mxPoint x="-7700" y="5220" />
               <mxPoint x="-6660" y="5220" />
               <mxPoint x="-6660" y="4653" />
@@ -368,7 +368,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="FH-SNYb2Djmgw0VP9b6U-264" value="SharedBlob" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-7260" y="4550" width="300" height="150" as="geometry" />
+          <mxGeometry x="-7260" y="4578" width="300" height="150" as="geometry" />
         </mxCell>
         <mxCell id="FH-SNYb2Djmgw0VP9b6U-265" value="+ collection:&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;CollectionRef&lt;div&gt;+&amp;nbsp;nref:&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;std::atomic_int = 0&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;loaded:&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;bool = false&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;///&amp;lt; sbid if persistent isn&#39;t loaded&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;sbid_unloaded:&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;uint64_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;///&amp;lt; persistent part of the shared blob if any&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;persistent:&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;bluestore_shared_blob_t *&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="FH-SNYb2Djmgw0VP9b6U-264" vertex="1">
           <mxGeometry y="26" width="300" height="124" as="geometry" />
@@ -738,7 +738,7 @@
           <mxGeometry x="-8250" y="3990" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="-AQjl2W1R9NTnIcbNzuT-25" value="" style="childLayout=tableLayout;recursiveResize=0;shadow=0;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-8250" y="5077" width="510" height="93" as="geometry" />
+          <mxGeometry x="-8250" y="4914" width="510" height="93" as="geometry" />
         </mxCell>
         <mxCell id="-AQjl2W1R9NTnIcbNzuT-26" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=0;fillColor=none;strokeColor=inherit;" vertex="1" parent="-AQjl2W1R9NTnIcbNzuT-25">
           <mxGeometry width="510" height="47" as="geometry" />
@@ -779,8 +779,7 @@
         <mxCell id="-AQjl2W1R9NTnIcbNzuT-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shape=flexArrow;startArrow=block;fillColor=#fad7ac;strokeColor=#b46504;" edge="1" parent="1" source="-AQjl2W1R9NTnIcbNzuT-26" target="FH-SNYb2Djmgw0VP9b6U-291">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-7690" y="5100" />
-              <mxPoint x="-7690" y="4938" />
+              <mxPoint x="-7740" y="4938" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -788,10 +787,42 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="-AQjl2W1R9NTnIcbNzuT-41" value="encode Blob 以上的信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;fontSize=20;" vertex="1" parent="1">
-          <mxGeometry x="-8500" y="5080" width="240" height="40" as="geometry" />
+          <mxGeometry x="-8500" y="4918.5" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="-AQjl2W1R9NTnIcbNzuT-42" value="encode Blob 以下的信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;fontSize=20;" vertex="1" parent="1">
-          <mxGeometry x="-8500" y="5124" width="240" height="40" as="geometry" />
+          <mxGeometry x="-8500" y="4962.5" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-AQjl2W1R9NTnIcbNzuT-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d0cee2;strokeColor=#56517e;shape=flexArrow;startArrow=block;" edge="1" parent="1" source="-AQjl2W1R9NTnIcbNzuT-43" target="FH-SNYb2Djmgw0VP9b6U-56">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-7100" y="5147" />
+              <mxPoint x="-7100" y="4903" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-AQjl2W1R9NTnIcbNzuT-43" value="" style="childLayout=tableLayout;recursiveResize=0;shadow=0;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-8250" y="5123" width="510" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="-AQjl2W1R9NTnIcbNzuT-44" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=0;fillColor=none;strokeColor=inherit;" vertex="1" parent="-AQjl2W1R9NTnIcbNzuT-43">
+          <mxGeometry width="510" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="-AQjl2W1R9NTnIcbNzuT-45" value="X" style="connectable=0;recursiveResize=0;strokeColor=#56517e;fillColor=#d0cee2;align=center;whiteSpace=wrap;html=1;" vertex="1" parent="-AQjl2W1R9NTnIcbNzuT-44">
+          <mxGeometry width="54" height="47" as="geometry">
+            <mxRectangle width="54" height="47" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-AQjl2W1R9NTnIcbNzuT-46" value="sbid" style="connectable=0;recursiveResize=0;strokeColor=#56517e;fillColor=#d0cee2;align=center;whiteSpace=wrap;html=1;" vertex="1" parent="-AQjl2W1R9NTnIcbNzuT-44">
+          <mxGeometry x="54" width="166" height="47" as="geometry">
+            <mxRectangle width="166" height="47" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-AQjl2W1R9NTnIcbNzuT-47" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;bluestore_shared_blob_t&lt;/span&gt;" style="connectable=0;recursiveResize=0;strokeColor=#56517e;fillColor=#d0cee2;align=center;whiteSpace=wrap;html=1;" vertex="1" parent="-AQjl2W1R9NTnIcbNzuT-44">
+          <mxGeometry x="220" width="290" height="47" as="geometry">
+            <mxRectangle width="290" height="47" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-AQjl2W1R9NTnIcbNzuT-57" value="encode shared Blob 信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="-8505" y="5126" width="250" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
