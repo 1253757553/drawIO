@@ -957,6 +957,57 @@
         <mxCell id="Lu5xNp8x4FlCRzmy62Yy-17" value="+ type:&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;uint8_t =&amp;nbsp;Compressor::COMP_ALG_NONE&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 压缩算法类型&lt;div&gt;+&amp;nbsp;length:&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;uint32_t = 0&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 压缩后的长度&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;compressor_message:&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;std::optional&amp;lt;int32_t&amp;gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 压缩算法需要固化的其它信息&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Lu5xNp8x4FlCRzmy62Yy-16">
           <mxGeometry y="26" width="620" height="54" as="geometry" />
         </mxCell>
+        <mxCell id="Lu5xNp8x4FlCRzmy62Yy-20" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-7960" y="5400" width="560" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="Lu5xNp8x4FlCRzmy62Yy-22" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-7880" y="5400" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="Lu5xNp8x4FlCRzmy62Yy-23" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-7720" y="5400" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="Lu5xNp8x4FlCRzmy62Yy-24" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-7560" y="5400" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="Lu5xNp8x4FlCRzmy62Yy-25" value="" style="endArrow=classicThin;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;dashed=1;startArrow=none;startFill=0;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-7960" y="5425" as="sourcePoint" />
+            <mxPoint x="-7960" y="5460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lu5xNp8x4FlCRzmy62Yy-27" value="" style="endArrow=classicThin;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;dashed=1;startArrow=none;startFill=0;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-7880" y="5425" as="sourcePoint" />
+            <mxPoint x="-7880" y="5460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lu5xNp8x4FlCRzmy62Yy-28" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-7960" y="5450" as="sourcePoint" />
+            <mxPoint x="-7880" y="5450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lu5xNp8x4FlCRzmy62Yy-30" value="" style="endArrow=classicThin;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;dashed=1;startArrow=none;startFill=0;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-7960.000000000002" y="5374" as="sourcePoint" />
+            <mxPoint x="-7960" y="5334" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lu5xNp8x4FlCRzmy62Yy-31" value="" style="endArrow=classicThin;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;dashed=1;startArrow=none;startFill=0;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-7400" y="5373" as="sourcePoint" />
+            <mxPoint x="-7400" y="5333" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lu5xNp8x4FlCRzmy62Yy-32" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-7960" y="5350" as="sourcePoint" />
+            <mxPoint x="-7400" y="5350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lu5xNp8x4FlCRzmy62Yy-33" value="Blob" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="-7960" y="5374" width="560" height="25" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
