@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.2.8">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.2.10">
   <diagram name="第 1 页" id="MkQnZm1Vq_tKfwfNKvTH">
-    <mxGraphModel dx="12270" dy="1831" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="10525" dy="824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -140,7 +140,7 @@
         <mxCell id="FH-SNYb2Djmgw0VP9b6U-6" value="+ bits:&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;uint32_t&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;///&amp;lt; how many bits of coll pgid are significant" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="FH-SNYb2Djmgw0VP9b6U-5" vertex="1">
           <mxGeometry y="26" width="570" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="X3UKsF2V2VTyQ7RIPws9-1" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="X3UKsF2V2VTyQ7RIPws9-1" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-8660" y="3990" width="4040" height="1230" as="geometry" />
         </mxCell>
         <mxCell id="FH-SNYb2Djmgw0VP9b6U-79" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="X3UKsF2V2VTyQ7RIPws9-1" vertex="1">
@@ -756,7 +756,7 @@
             <mxRectangle width="166" height="47" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-AQjl2W1R9NTnIcbNzuT-29" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;bluestore_onode_t +&amp;nbsp;&lt;/span&gt;&lt;b&gt;spanning_blob_map + Extent (如果没有 shard 的话)&lt;/b&gt;" style="connectable=0;recursiveResize=0;fillColor=#fad7ac;align=center;whiteSpace=wrap;html=1;strokeColor=#b46504;" parent="-AQjl2W1R9NTnIcbNzuT-26" vertex="1">
+        <mxCell id="-AQjl2W1R9NTnIcbNzuT-29" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;bluestore_onode_t +&amp;nbsp;&lt;/span&gt;&lt;b&gt;spanning_blob_map + ExtentMap (如果没有 shard 的话)&lt;/b&gt;" style="connectable=0;recursiveResize=0;fillColor=#fad7ac;align=center;whiteSpace=wrap;html=1;strokeColor=#b46504;" parent="-AQjl2W1R9NTnIcbNzuT-26" vertex="1">
           <mxGeometry x="220" width="290" height="47" as="geometry">
             <mxRectangle width="290" height="47" as="alternateBounds" />
           </mxGeometry>
@@ -774,7 +774,7 @@
             <mxRectangle width="166" height="46" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-AQjl2W1R9NTnIcbNzuT-33" value="extent_map 中处于 &amp;lt;offset, next_shard_offset&amp;gt; 范围内所有的 Extent 按顺序 encode" style="connectable=0;recursiveResize=0;strokeColor=#0e8088;fillColor=#b0e3e6;align=center;whiteSpace=wrap;html=1;" parent="-AQjl2W1R9NTnIcbNzuT-30" vertex="1">
+        <mxCell id="-AQjl2W1R9NTnIcbNzuT-33" value="&lt;b&gt;extent_map 中处于 &amp;lt;offset, next_shard_offset&amp;gt; 范围内所有的 Extent 按顺序 encode&lt;/b&gt;" style="connectable=0;recursiveResize=0;strokeColor=#0e8088;fillColor=#b0e3e6;align=center;whiteSpace=wrap;html=1;" parent="-AQjl2W1R9NTnIcbNzuT-30" vertex="1">
           <mxGeometry x="220" width="290" height="46" as="geometry">
             <mxRectangle width="290" height="46" as="alternateBounds" />
           </mxGeometry>
