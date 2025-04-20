@@ -1144,6 +1144,9 @@
         <mxCell id="8DNqZgWN_eWUO62PGRpc-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-8620" y="5520" width="80" height="25" as="geometry" />
         </mxCell>
+        <mxCell id="8DNqZgWN_eWUO62PGRpc-38" value="看起来不是啊，貌似 allocator 使用的也是 bluestore 设定的 min_alloc_size&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-8950" y="5605" width="420" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
