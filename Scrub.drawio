@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.4">
   <diagram name="第 1 页" id="veYvc7N9t9nZ9YCo-E3M">
-    <mxGraphModel dx="3258" dy="1393" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3258" dy="2562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="g8UUkPMF8Psy_OWtPhUt-0" />
         <mxCell id="g8UUkPMF8Psy_OWtPhUt-1" parent="g8UUkPMF8Psy_OWtPhUt-0" />
@@ -26,19 +26,19 @@
           <mxGeometry height="30" width="450" x="260" y="650" as="geometry" />
         </mxCell>
         <mxCell id="LVVFSJyZn5V4OdKr9KBG-9" parent="g8UUkPMF8Psy_OWtPhUt-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Job A&amp;nbsp;&lt;div&gt;(sched_time: 1, pgid: 1)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="130" x="460" y="440" as="geometry" />
+          <mxGeometry height="40" width="130" x="460" y="429" as="geometry" />
         </mxCell>
         <mxCell id="LVVFSJyZn5V4OdKr9KBG-10" parent="g8UUkPMF8Psy_OWtPhUt-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Job B&amp;nbsp;&lt;div&gt;(sched_time: 2, pgid: 2)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="120" x="370" y="520" as="geometry" />
+          <mxGeometry height="40" width="120" x="370" y="509" as="geometry" />
         </mxCell>
         <mxCell id="LVVFSJyZn5V4OdKr9KBG-11" parent="g8UUkPMF8Psy_OWtPhUt-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Job C&amp;nbsp;&lt;div&gt;(sched_time: 3, pgid: 3)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="120" x="550" y="520" as="geometry" />
+          <mxGeometry height="40" width="120" x="550" y="509" as="geometry" />
         </mxCell>
         <mxCell id="LVVFSJyZn5V4OdKr9KBG-12" parent="g8UUkPMF8Psy_OWtPhUt-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Job D&amp;nbsp;&lt;div&gt;(sched_time: 2, pgid: 4)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="120" x="280" y="600" as="geometry" />
+          <mxGeometry height="40" width="120" x="280" y="589" as="geometry" />
         </mxCell>
         <mxCell id="LVVFSJyZn5V4OdKr9KBG-13" parent="g8UUkPMF8Psy_OWtPhUt-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Job E&amp;nbsp;&lt;div&gt;(sched_time: 5, pgid: 5)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="120" x="460" y="600" as="geometry" />
+          <mxGeometry height="40" width="120" x="460" y="589" as="geometry" />
         </mxCell>
         <mxCell id="LVVFSJyZn5V4OdKr9KBG-14" edge="1" parent="g8UUkPMF8Psy_OWtPhUt-1" source="LVVFSJyZn5V4OdKr9KBG-9" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" target="LVVFSJyZn5V4OdKr9KBG-10" value="">
           <mxGeometry relative="1" as="geometry" />
@@ -61,17 +61,71 @@
         <mxCell id="LVVFSJyZn5V4OdKr9KBG-20" parent="g8UUkPMF8Psy_OWtPhUt-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="osd tick" vertex="1">
           <mxGeometry height="30" width="60" x="-170" y="750" as="geometry" />
         </mxCell>
-        <mxCell id="LVVFSJyZn5V4OdKr9KBG-21" parent="g8UUkPMF8Psy_OWtPhUt-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="&lt;p class=&quot;p1&quot; style=&quot;margin: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 13px; line-height: normal; text-align: start;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;&quot;&gt;Scrubber&lt;/font&gt;&lt;/p&gt;" vertex="1">
-          <mxGeometry height="114" width="530" x="840" y="280" as="geometry" />
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-0" parent="g8UUkPMF8Psy_OWtPhUt-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Scrubber&lt;/span&gt;" vertex="1">
+          <mxGeometry height="1136" width="700" x="950" y="-742" as="geometry" />
         </mxCell>
-        <mxCell id="LVVFSJyZn5V4OdKr9KBG-22" parent="LVVFSJyZn5V4OdKr9KBG-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="+&amp;nbsp;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;pgid&lt;/span&gt;:&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;spg_t&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// scrub 任务对应的 pg&lt;/span&gt;&lt;div data-imt_insert_failed=&quot;1&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;sched_time:&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;utime_t&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 柔性调度时间&lt;/span&gt;&lt;/div&gt;&lt;div data-imt_insert_failed=&quot;1&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;deadline:&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;utime_t&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 硬性调度时间&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="54" width="530" y="26" as="geometry" />
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-1" parent="o6_rCHFoelcH-kfhkwB6-0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="&lt;b&gt;Metadata&lt;/b&gt;&lt;br&gt;+ reserved_peers: set&lt;pg_shard_t&gt;&lt;br&gt;+ reserved: bool&lt;br&gt;+ reserve_failed: bool&lt;br&gt;+ epoch_start: epoch_t" vertex="1">
+          <mxGeometry height="78" width="700" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="LVVFSJyZn5V4OdKr9KBG-23" parent="LVVFSJyZn5V4OdKr9KBG-21" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" value="" vertex="1">
-          <mxGeometry height="8" width="530" y="80" as="geometry" />
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-2" parent="o6_rCHFoelcH-kfhkwB6-0" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" value="" vertex="1">
+          <mxGeometry height="8" width="700" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="LVVFSJyZn5V4OdKr9KBG-24" parent="LVVFSJyZn5V4OdKr9KBG-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="+&amp;nbsp;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;operator&amp;lt;(const ScrubJob&amp;amp;)&lt;/span&gt;:&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;bool&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 以 &amp;lt;&lt;span style=&quot;font-size: 13px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;sched_time, pgid&amp;gt; 构成的小根堆&lt;/span&gt;" vertex="1">
-          <mxGeometry height="26" width="530" y="88" as="geometry" />
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-3" parent="o6_rCHFoelcH-kfhkwB6-0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="&lt;b&gt;Common to both scrubs&lt;/b&gt;&lt;br&gt;+ active: bool&lt;br&gt;+ waiting_on_whom: set&lt;pg_shard_t&gt;&lt;br&gt;+ shallow_errors: int&lt;br&gt;+ deep_errors: int&lt;br&gt;+ large_omap_objects: int&lt;br&gt;+ fixed: int&lt;br&gt;+ primary_scrubmap: ScrubMap&lt;br&gt;+ primary_scrubmap_pos: ScrubMapBuilder&lt;br&gt;+ replica_scrub_start: epoch_t&lt;br&gt;+ replica_scrubmap: ScrubMap&lt;br&gt;+ replica_scrubmap_pos: ScrubMapBuilder&lt;br&gt;+ received_maps: map&lt;pg_shard_t, ScrubMap&gt;&lt;br&gt;+ active_rep_scrub: OpRequestRef&lt;br&gt;+ scrub_reg_stamp: utime_t" vertex="1">
+          <mxGeometry height="242" width="700" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-4" parent="o6_rCHFoelcH-kfhkwB6-0" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" value="" vertex="1">
+          <mxGeometry height="8" width="700" y="354" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-5" parent="o6_rCHFoelcH-kfhkwB6-0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="&lt;b&gt;For async sleep&lt;/b&gt;&lt;br&gt;+ sleeping: bool&lt;br&gt;+ needs_sleep: bool&lt;br&gt;+ sleep_start: utime_t" vertex="1">
+          <mxGeometry height="58" width="700" y="362" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-6" parent="o6_rCHFoelcH-kfhkwB6-0" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" value="" vertex="1">
+          <mxGeometry height="8" width="700" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-7" parent="o6_rCHFoelcH-kfhkwB6-0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="&lt;b&gt;Flags&lt;/b&gt;&lt;br&gt;+ must_scrub: bool&lt;br&gt;+ must_deep_scrub: bool&lt;br&gt;+ must_repair: bool&lt;br&gt;+ auto_repair: bool&lt;br&gt;+ check_repair: bool&lt;br&gt;+ deep_scrub_on_error: bool&lt;br&gt;+ priority: unsigned" vertex="1">
+          <mxGeometry height="130" width="700" y="428" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-8" parent="o6_rCHFoelcH-kfhkwB6-0" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" value="" vertex="1">
+          <mxGeometry height="8" width="700" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-9" parent="o6_rCHFoelcH-kfhkwB6-0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="&lt;b&gt;Error Maps&lt;/b&gt;&lt;br&gt;+ missing: map&lt;hobject_t, set&lt;pg_shard_t&gt;&gt;&lt;br&gt;+ inconsistent: map&lt;hobject_t, set&lt;pg_shard_t&gt;&gt;&lt;br&gt;+ authoritative: map&lt;hobject_t, list&lt;pair&lt;ScrubMap::object, pg_shard_t&gt;&gt;&gt;&lt;br&gt;+ cleaned_meta_map: ScrubMap" vertex="1">
+          <mxGeometry height="94" width="700" y="566" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-10" parent="o6_rCHFoelcH-kfhkwB6-0" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" value="" vertex="1">
+          <mxGeometry height="8" width="700" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-11" parent="o6_rCHFoelcH-kfhkwB6-0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="&lt;b&gt;Digest updates&lt;/b&gt;&lt;br&gt;+ num_digest_updates_pending: int" vertex="1">
+          <mxGeometry height="38" width="700" y="668" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-12" parent="o6_rCHFoelcH-kfhkwB6-0" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" value="" vertex="1">
+          <mxGeometry height="8" width="700" y="706" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-13" parent="o6_rCHFoelcH-kfhkwB6-0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="&lt;b&gt;Chunky Scrub&lt;/b&gt;&lt;br&gt;+ start: hobject_t&lt;br&gt;+ end: hobject_t&lt;br&gt;+ max_end: hobject_t&lt;br&gt;+ subset_last_update: eversion_t&lt;br&gt;+ store: std::unique_ptr&lt;Scrub::Store&gt;" vertex="1">
+          <mxGeometry height="108" width="700" y="714" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-14" parent="o6_rCHFoelcH-kfhkwB6-0" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" value="" vertex="1">
+          <mxGeometry height="8" width="700" y="822" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-15" parent="o6_rCHFoelcH-kfhkwB6-0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="&lt;b&gt;Deep Scrub&lt;/b&gt;&lt;br&gt;+ deep: bool&lt;br&gt;+ preempt_left: int&lt;br&gt;+ preempt_divisor: int" vertex="1">
+          <mxGeometry height="58" width="700" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-16" parent="o6_rCHFoelcH-kfhkwB6-0" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" value="" vertex="1">
+          <mxGeometry height="8" width="700" y="888" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-17" parent="o6_rCHFoelcH-kfhkwB6-0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="&lt;b&gt;Callbacks&lt;/b&gt;&lt;br&gt;+ callbacks: list&lt;Context*&gt;" vertex="1">
+          <mxGeometry height="38" width="700" y="896" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-18" parent="o6_rCHFoelcH-kfhkwB6-0" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" value="" vertex="1">
+          <mxGeometry height="8" width="700" y="934" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-19" parent="o6_rCHFoelcH-kfhkwB6-0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="&lt;b&gt;Methods&lt;/b&gt;&lt;br&gt;+ Scrubber()&lt;br&gt;+ ~Scrubber()&lt;br&gt;+ clean_meta_map(ScrubMap &amp;for_meta_scrub): void&lt;br&gt;+ add_callback(Context *context): void&lt;br&gt;+ run_callbacks(): void&lt;br&gt;+ state_string(const PG::Scrubber::State&amp; state): const char* (static)&lt;br&gt;+ is_chunky_scrub_active() const: bool&lt;br&gt;+ reset(): void&lt;br&gt;+ create_results(const hobject_t&amp; obj): void&lt;br&gt;+ cleanup_store(ObjectStore::Transaction *t): void" vertex="1">
+          <mxGeometry height="194" width="700" y="942" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-20" parent="g8UUkPMF8Psy_OWtPhUt-1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;State (enum)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="200" width="180" x="1790" y="-742" as="geometry" />
+        </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-21" parent="o6_rCHFoelcH-kfhkwB6-20" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="INACTIVE&lt;br&gt;NEW_CHUNK&lt;br&gt;WAIT_PUSHES&lt;br&gt;WAIT_LAST_UPDATE&lt;br&gt;BUILD_MAP&lt;br&gt;BUILD_MAP_DONE&lt;br&gt;WAIT_REPLICAS&lt;br&gt;COMPARE_MAPS&lt;br&gt;WAIT_DIGEST_UPDATES&lt;br&gt;FINISH&lt;br&gt;BUILD_MAP_REPLICA" vertex="1">
+          <mxGeometry height="174" width="180" y="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
