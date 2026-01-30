@@ -290,6 +290,9 @@
         <mxCell id="o6_rCHFoelcH-kfhkwB6-98" parent="g8UUkPMF8Psy_OWtPhUt-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Scrub result&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;;&quot;&gt;missing&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;;&quot;&gt;inconsistent&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;;&quot;&gt;authoritative&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;;&quot;&gt;cleaned_meta_map&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="110" x="1250" y="-140" as="geometry" />
         </mxCell>
+        <mxCell id="o6_rCHFoelcH-kfhkwB6-99" parent="g8UUkPMF8Psy_OWtPhUt-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="scrub_&amp;lt;pgid&amp;gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;scrub_1.0&lt;/li&gt;&lt;li&gt;scrub_1.1&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="2100" y="450" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
